@@ -14,7 +14,13 @@ class CreateDonersTable extends Migration
     public function up()
     {
         Schema::create('doners', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('d_id');
+            $table->string('d_name');
+            $table->string('d_bloodtype');
+            $table->text('d_mobile')->unique();;
+            $table->string('d_governorate');
+            $table->string('d_city');
+            $table->text('email')->nullble();
             $table->timestamps();
         });
     }
