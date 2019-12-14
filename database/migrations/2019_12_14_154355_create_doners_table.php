@@ -20,7 +20,7 @@ class CreateDonersTable extends Migration
             $table->text('d_mobile')->unique();;
             $table->string('d_governorate');
             $table->string('d_city');
-            $table->text('email')->nullble() and unique();
+            $table->text('email')->unique();
             $table->timestamps();
         });
     }
