@@ -8,4 +8,9 @@ class governorate extends Model
 {
     //
     protected $table ='governorates';
+
+    public function cities()
+    {
+        return $this->hasMany(citie::class);
+    }
 }

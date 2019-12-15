@@ -8,4 +8,9 @@ class citie extends Model
 {
     //
     protected $table = 'cities';
+
+    public function governorates()
+    {
+        return $this->belongsTo(governorate::class);
+    }
 }

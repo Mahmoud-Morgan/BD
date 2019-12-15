@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form Document with bootstrab</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.bootstrap.css">
+{{--	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">--}}
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/mycssfile.css')}}">
 
 
 </head>
@@ -92,6 +95,8 @@
 	</div>
 	<script src="js/bootstrap.js"></script>
 
+    <script type="text/javascript" src="{{ URL::asset('/js/jquery-3.4.1.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('/js/jquery.min.js') }}"></script>
 
 			</div>
 
