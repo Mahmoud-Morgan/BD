@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/doner','DonerController@index');
+
+Route::get('/info','DonerController@info');
+
+Route::post('/store','DonerController@store');

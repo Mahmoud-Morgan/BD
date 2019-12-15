@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Doner extends Model
+class bloodType extends Model
 {
     //
-    protected $table = 'doners';
+    protected $table ='bloodTypes';
 }
