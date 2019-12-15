@@ -65,36 +65,16 @@ class DonerController extends Controller
         //
 
 
-        $doners = DB::table('doners')->get();
-//        $bloodtypes = DB::table('bloodtypes')->get();
+//     $doners = DB::table('doners')
+//        ->join('bloodTypes', 'd_b_id', '=', 'b_id')
+//        ->join('governorates', 'd_governorate', '=', 'id')
+//         ->join('cities', 'd_city', '=', 'id')
+//        ->select('doners.*', 'bloodTypes.blood_type', 'governorates.governorate_name','cities.city_name')
+//        ->get();
 
+             $doners = DB::table('doners')
+        ->join('bloodTypes', 'd_b_id', '=', 'b_id')->get();
 
-        $doners=$doners->where('d_governorate','=','9');
-
-
-
-//        $bloodtype_id= $request->bloodtype;
-//        $governorate_id= $request->governorate;
-//        $city_id= $request->city;
-//
-//
-//
-//        if (!empty($bloodtype_id)) {
-//            //We should filter gender
-//            $query->where('d_b_id', $bloodtype_id);
-//        }
-//
-//        if (!empty($governorate_id)) {
-//            //We should filter status too
-//            $query->where('d_governorate', $governorate_id);
-//        }
-//
-//        if (!empty($city_id)) {
-//            //Filter by age
-//            $query->where('d_city', $city_id);
-//        }
-
-//        $collections = $query->get();
 
         return view('donersTables')->with('doners',$doners);
 

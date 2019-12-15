@@ -11,6 +11,6 @@ class citie extends Model
 
     public function governorates()
     {
-        return $this->belongsTo(governorate::class);
+        return $this->belongsTo(governorate::class,'gov_id','id');
     }
 }

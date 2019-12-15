@@ -8,4 +8,9 @@ class bloodType extends Model
 {
     //
     protected $table ='bloodTypes';
+
+    public function doners(){
+
+        return $this->hasMany(Doner::class);
+    }
 }
