@@ -1,2 +1,3 @@
 <?php
-"<h1>Welcom</h1>";
+
+    echo "welcome";

@@ -1,0 +1,29 @@
+*{
+	Color:black;
+}
+.bg{
+	background: url("file:///F:/MOHAMMEDABDELMAJED/ITI%20Course/sub/2programming%20course/instructors/2DR.seham/0sixthweek-intro+boootstrab+jquery/0bootstrab/lec1/task%20h.w/form%20with%20bootsrtab/images/mosque.jpg") ;
+	background-repeat: repeat-x repeat-y;
+	width: 100%;
+	height: 100%;
+	background-color:white;
+}
+
+	
+	
+	
+	
+
+	
+.form-container{
+	border: 2px solid ;
+	padding: 60px 50px;
+	
+ 	background-color:white;
+
+	box-align: center;
+    width: 200%;
+	height:650px;
+	
+
+}

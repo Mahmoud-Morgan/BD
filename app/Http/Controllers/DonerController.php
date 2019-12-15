@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\citie;
+use App\Doner;
+use App\governorate;
 use Illuminate\Http\Request;
 
 class DonerController extends Controller
@@ -13,11 +16,16 @@ class DonerController extends Controller
      */
     public function index()
     {
-        //
 
-        return view('home');
-        
-        
+        return view('doner');
+
+    }
+
+
+    public function info()
+    {
+        //
+        return ('info token');
     }
 
     /**
@@ -39,6 +47,16 @@ class DonerController extends Controller
     public function store(Request $request)
     {
         //
+        $Doner = new Doner();
+        $Doner->d_name = $request->d_name;
+        $Doner->d_mobile = $request->d_mobile;
+        $Doner->email = $request->email;
+        $Doner->d_b_id = $request->d_b_id;
+        $Doner->d_governorate = $request->d_governorate;
+        $Doner->d_city = $request->d_city;
+        $Doner->save();
+
+        return back();
     }
 
     /**
