@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\bloodType;
 use App\citie;
 use App\Doner;
 use App\governorate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DonerController extends Controller
 {
@@ -58,7 +60,51 @@ class DonerController extends Controller
 
         return back();
     }
+    public function filter(Request $request)
+    {
+        //
 
+
+        $doners = DB::table('doners')->get();
+//        $bloodtypes = DB::table('bloodtypes')->get();
+
+
+        $doners=$doners->where('d_governorate','=','9');
+
+
+
+//        $bloodtype_id= $request->bloodtype;
+//        $governorate_id= $request->governorate;
+//        $city_id= $request->city;
+//
+//
+//
+//        if (!empty($bloodtype_id)) {
+//            //We should filter gender
+//            $query->where('d_b_id', $bloodtype_id);
+//        }
+//
+//        if (!empty($governorate_id)) {
+//            //We should filter status too
+//            $query->where('d_governorate', $governorate_id);
+//        }
+//
+//        if (!empty($city_id)) {
+//            //Filter by age
+//            $query->where('d_city', $city_id);
+//        }
+
+//        $collections = $query->get();
+
+        return view('donersTables')->with('doners',$doners);
+
+
+
+
+
+
+
+    }
     /**
      * Display the specified resource.
      *
@@ -68,6 +114,7 @@ class DonerController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
