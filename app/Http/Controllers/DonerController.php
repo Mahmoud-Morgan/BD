@@ -65,15 +65,16 @@ class DonerController extends Controller
         //
 
 
-//     $doners = DB::table('doners')
-//        ->join('bloodTypes', 'd_b_id', '=', 'b_id')
-//        ->join('governorates', 'd_governorate', '=', 'id')
-//         ->join('cities', 'd_city', '=', 'id')
-//        ->select('doners.*', 'bloodTypes.blood_type', 'governorates.governorate_name','cities.city_name')
-//        ->get();
-
              $doners = DB::table('doners')
-        ->join('bloodTypes', 'd_b_id', '=', 'b_id')->get();
+        ->join('bloodTypes', 'd_b_id', '=', 'b_id')
+          ->leftJoin ('governorates', 'd_governorate', '=', 'id')
+           ->leftJoin ('cities', 'd_city', '=', 'c_id')
+         ->select('doners.*', 'bloodTypes.blood_type', 'governorates.governorate_name','cities.city_name')
+           ->get();
+
+            $doners = $doners->where('d_governorate','=','1');
+
+
 
 
         return view('donersTables')->with('doners',$doners);
