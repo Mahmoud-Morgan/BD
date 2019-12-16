@@ -24,12 +24,6 @@ class DonerController extends Controller
     }
 
 
-    public function info()
-    {
-        //
-        return ('info token');
-    }
-
     /**
      * Show the form for creating a new resource.
      *

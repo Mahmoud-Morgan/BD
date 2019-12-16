@@ -17,7 +17,7 @@
 		<div class="rows">
 		<div class="col-md-3 col-sm-3 col-xs-12"></div>
 		<div class="col-md-3 col-sm-3 col-xs-12">
-			<form action= "store" method="post" class="form-container">
+			<form action= "donerstore" method="post" class="form-container">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 		<!--بداية كود النموذج-->

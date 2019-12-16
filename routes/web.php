@@ -17,15 +17,15 @@ Route::get('/', function () {
 
 Route::get('/doner','DonerController@index');
 
-Route::post('/store','DonerController@store');
+Route::post('/donerstore','DonerController@store');
 
 Route::get('/search','DonerController@filter');
 
 Route::post('/search','DonerController@filter');
 
-Route::get('/patient',function (){
-    return view('patientform');
-});
+Route::get('/patient','PatientController@index');
+
+Route::post('/patientstore','PatientController@store');
 
 Route::get('/home',function (){
     return view('home');
