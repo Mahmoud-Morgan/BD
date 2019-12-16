@@ -68,10 +68,22 @@
 					</select>
 
 					</div><br>
-						<button type="submit">تسجيل الدخول</button>
+
+						<button type="submit" style="...">تسجيل البيانات</button>
+
+
 				</form>
 
+                    <div>
+                        <h3>
+                        {{--                           //--}}
+                        </h3>
+                        <br>
 
+                        <a href="/search" ><button style="font-size:25px"> بيانات المتبرعين</button></a>
+
+                    </div>
+                    <br>
 				</div>
 			</div>
 		</section>

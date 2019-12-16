@@ -13,18 +13,7 @@
     @extends('layout')
     @section('content')
 		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="index.html" class="logo" ><strong>Project</strong> AL Qantaruh Team</a>
-					<nav id="nav" >
-						<a href="elements.html"	>اتصل بنا</a>
-						<a href="generic.html">فوائد التبرع</a>
-						<a href="index.html">الرائسية</a>
-					</nav>
-					<a href="#navPanel" class="navPanelToggle" ><span class="fa fa-bars"></span></a>
-				</div>
 
-			</header>
 
 		<!-- Banner -->
 
