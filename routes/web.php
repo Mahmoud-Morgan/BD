@@ -25,6 +25,18 @@ Route::get('/filter','DonerController@filter');
 
 Route::post('/filter','DonerController@store');
 
-Route::get('/sahar1',function (){
-    return view('data recording');
+Route::get('/patiant',function (){
+    return view('patiantform');
+});
+
+Route::get('/home',function (){
+    return view('home');
+});
+
+Route::get('/layout',function (){
+    return view('layout');
+});
+
+Route::get('/search',function (){
+    return view('search');
 });

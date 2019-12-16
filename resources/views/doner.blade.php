@@ -93,10 +93,10 @@
 		<div class="col-md-4 col-sm-4 col-xs-12"></div>
 		</div>
 	</div>
-	<script src="js/bootstrap.js"></script>
 
-    <script type="text/javascript" src="{{ URL::asset('/js/jquery-3.4.1.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('/js/jquery.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ URL::asset('js/jquery-3.4.1.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
 
 			</div>
 

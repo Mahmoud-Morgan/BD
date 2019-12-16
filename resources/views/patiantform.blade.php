@@ -1,28 +1,12 @@
 <!DOCTYPE HTML>
 
 <html>
-	<head>
-		<title>Data recording</title>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
         <link rel="stylesheet" type="text/css" href="{{URL::asset('css/main.css')}}">
 
-	</head>
-	<body class="subpage">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-
-					<nav id="nav">
-						<a href="index.html">الصفحه الرئيسيه</a>
-						<a href="generic.html">انا متبرع</a>
-						<a href="elements.html">انا محتاج دم</a>
-					</nav>
-
-				</div>
-			</header>
-
+@extends('layout')
+        @section('content')
 	<!-- نموذج تسجيل البيانات -->
 		<section id="container">
 			<div class="inner">
@@ -91,12 +75,12 @@
 				</div>
 			</div>
 		</section>
-
+@endsection
 		<!-- Scripts -->
-			<script src="/js/jquery.min.js"></script>
-			<script src="js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/skel.min.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/until.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
 
 	</body>
 </html>
