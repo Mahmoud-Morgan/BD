@@ -63,19 +63,29 @@ class DonerController extends Controller
     public function filter(Request $request)
     {
         //
-
+        $request->d_governorate = 9 ;
+        $request->d_b_id;
+        $request->d_city=139;
 
              $doners = DB::table('doners')
-        ->join('bloodTypes', 'd_b_id', '=', 'b_id')
-          ->leftJoin ('governorates', 'd_governorate', '=', 'id')
-           ->leftJoin ('cities', 'd_city', '=', 'c_id')
+         ->join('bloodTypes', 'd_b_id', '=', 'b_id')
+         ->leftJoin ('governorates', 'd_governorate', '=', 'id')
+         ->leftJoin ('cities', 'd_city', '=', 'c_id')
          ->select('doners.*', 'bloodTypes.blood_type', 'governorates.governorate_name','cities.city_name')
-           ->get();
-
-            $doners = $doners->where('d_governorate','=','1');
+         ->get();
 
 
+             if(!empty($request->d_b_id)){
+                 $doners = $doners->where ('d_b_id','=',$request->d_b_id);
+             }
 
+             if(!empty($request->d_governorate)) {
+                 $doners = $doners->where('d_governorate', '=', $request->d_governorate);
+             }
+
+             if(!empty($request->d_city)) {
+                 $doners = $doners->where('d_city', '=', $request->d_city);
+             }
 
         return view('donersTables')->with('doners',$doners);
 

@@ -21,6 +21,6 @@ class Doner extends Model
 
     public function cities()
     {
-        return $this->belongsTo(citie::class,'d_city','id');
+        return $this->belongsTo(citie::class,'d_city','c_id');
     }
 }

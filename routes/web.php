@@ -22,3 +22,5 @@ Route::get('/info','DonerController@info');
 Route::post('/store','DonerController@store');
 
 Route::get('/filter','DonerController@filter');
+
+Route::post('/filter','DonerController@store');
