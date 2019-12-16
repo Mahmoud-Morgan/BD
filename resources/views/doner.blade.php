@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form Document with bootstrab</title>
 {{--	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">--}}
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/mycssfile.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/mycssfile.css')}}">
 
 
 </head>
@@ -76,7 +76,7 @@
 						<div class="col-sm-3">
 					<select class="form-control" name="d_city" id="d_city">
                         @foreach(App\citie ::get() as $city)
-                            <option value='{{$city->id}} '>   {{$city->city_name}} </option>
+                            <option value='{{$city->c_id}} '>   {{$city->city_name}} </option>
                         @endforeach
 					</select>
 					</div>
@@ -93,10 +93,10 @@
 		<div class="col-md-4 col-sm-4 col-xs-12"></div>
 		</div>
 	</div>
-	<script src="js/bootstrap.js"></script>
 
-    <script type="text/javascript" src="{{ URL::asset('/js/jquery-3.4.1.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('/js/jquery.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ URL::asset('js/jquery-3.4.1.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
 
 			</div>
 

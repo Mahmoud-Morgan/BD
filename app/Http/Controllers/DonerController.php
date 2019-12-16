@@ -60,34 +60,44 @@ class DonerController extends Controller
 
         return back();
     }
-    public function filter(Request $request)
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $requests
+     * @return \Illuminate\Http\Response
+     */
+
+    public function filter(Request $requests)
     {
         //
-        $request->d_governorate = 9 ;
-        $request->d_b_id;
-        $request->d_city=139;
+//        $requests->d_governorate;
+//        $requests->d_b_id;
+//        $requests->d_city;
 
              $doners = DB::table('doners')
          ->join('bloodTypes', 'd_b_id', '=', 'b_id')
          ->leftJoin ('governorates', 'd_governorate', '=', 'id')
          ->leftJoin ('cities', 'd_city', '=', 'c_id')
          ->select('doners.*', 'bloodTypes.blood_type', 'governorates.governorate_name','cities.city_name')
+          ->orderBy('d_governorate','asc')
+          ->orderBy('d_city','asc')
          ->get();
 
 
-             if(!empty($request->d_b_id)){
-                 $doners = $doners->where ('d_b_id','=',$request->d_b_id);
+             if(!empty($requests->d_b_id)){
+                 $doners = $doners->where ('d_b_id','=',$requests->d_b_id);
              }
 
-             if(!empty($request->d_governorate)) {
-                 $doners = $doners->where('d_governorate', '=', $request->d_governorate);
+             if(!empty($requests->d_governorate)) {
+                 $doners = $doners->where('d_governorate', '=', $requests->d_governorate);
              }
 
-             if(!empty($request->d_city)) {
-                 $doners = $doners->where('d_city', '=', $request->d_city);
+             if(!empty($requests->d_city)) {
+                 $doners = $doners->where('d_city', '=', $requests->d_city);
              }
 
-        return view('donersTables')->with('doners',$doners);
+        return view('search')->with('doners',$doners);
 
 
 
