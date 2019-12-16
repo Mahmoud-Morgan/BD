@@ -24,3 +24,7 @@ Route::post('/store','DonerController@store');
 Route::get('/filter','DonerController@filter');
 
 Route::post('/filter','DonerController@store');
+
+Route::get('/sahar1',function (){
+    return view('data recording');
+});

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form Document with bootstrab</title>
 {{--	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">--}}
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/mycssfile.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/mycssfile.css')}}">
 
 
 </head>
