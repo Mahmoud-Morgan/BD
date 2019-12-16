@@ -17,7 +17,7 @@
 		<div class="rows">
 		<div class="col-md-3 col-sm-3 col-xs-12"></div>
 		<div class="col-md-3 col-sm-3 col-xs-12">
-			<form action= "donerstore" method="post" class="form-container">
+			<form action= "donorstore" method="post" class="form-container">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 		<!--بداية كود النموذج-->
@@ -86,7 +86,6 @@
 					<button type="submit" class="btn btn-danger btn-block">تسجيل الدخول</button>
 					</fieldset>
 				</form>
-
 		<!--نهاية كود النموذج-->
 
 		</div>

@@ -11,6 +11,6 @@ class bloodType extends Model
 
     public function doners(){
 
-        return $this->hasMany(Doner::class);
+        return $this->hasMany(Donor::class);
     }
 }

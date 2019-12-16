@@ -13,7 +13,7 @@ class CreateDonersTable extends Migration
      */
     public function up()
     {
-        Schema::create('doners', function (Blueprint $table) {
+        Schema::create('donors', function (Blueprint $table) {
             $table->bigIncrements('d_id');
             $table->string('d_name');
             $table->string('d_bloodtype');

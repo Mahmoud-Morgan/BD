@@ -30,7 +30,7 @@
                 <h3>هل تريد ان تتبرع</h3>
                 <br>
 
-                <a href="/doner" ><button style="font-size:25px">متبرع<i class="fa fa-heart"></i></button></a>
+                <a href="/donor" ><button style="font-size:25px">متبرع<i class="fa fa-heart"></i></button></a>
 
             </div>
 

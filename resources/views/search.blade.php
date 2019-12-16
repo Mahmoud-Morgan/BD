@@ -77,9 +77,9 @@
         <tr>
             <th>رقم التليفون</th>  <th>المحافظة</th> <th>المدينة</th> <th>فصيلة الدم</th>
         </tr>
-            @foreach($doners as $doner)
+            @foreach($donors as $donor)
                 <tr>
-                <td>{{$doner->d_mobile}}</td> <td>{{$doner->governorate_name}}</td> <td>{{$doner->city_name}}</td> <td>{{$doner->blood_type}}</td>
+                <td>{{$donor->d_mobile}}</td> <td>{{$donor->governorate_name}}</td> <td>{{$donor->city_name}}</td> <td>{{$donor->blood_type}}</td>
                 </tr>
             @endforeach
 

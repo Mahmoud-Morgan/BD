@@ -15,13 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/doner','DonerController@index');
+Route::get('/donor','DonorController@index');
 
-Route::post('/donerstore','DonerController@store');
+Route::post('/donorstore','DonorController@store');
 
-Route::get('/search','DonerController@filter');
+Route::get('/search','DonorController@filter');
 
-Route::post('/search','DonerController@filter');
+Route::post('/search','DonorController@filter');
 
 Route::get('/patient','PatientController@index');
 
