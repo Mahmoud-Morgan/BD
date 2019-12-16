@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Doner extends Model
+class Donor extends Model
 {
     //
-    protected $table = 'doners';
+    protected $table = 'donors';
 
     public function bloodTypes()
     {

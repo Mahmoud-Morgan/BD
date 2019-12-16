@@ -9,10 +9,10 @@
     <<link rel="stylesheet" type="text/css" href="{{URL::asset('css/main.css')}}">
 
 </head>
+
+<body>
 @extends('layout')
 @section('content')
-<body>
-
 <!-- Header -->
 
 
@@ -30,7 +30,7 @@
                 <h3>هل تريد ان تتبرع</h3>
                 <br>
 
-                <a href="/doner" ><button style="font-size:25px">متبرع<i class="fa fa-heart"></i></button></a>
+                <a href="/donor" ><button style="font-size:25px">متبرع<i class="fa fa-heart"></i></button></a>
 
             </div>
 

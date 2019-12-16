@@ -11,66 +11,65 @@
 		<section id="container">
 			<div class="inner">
 				<div class="align-center">
-					<h2 class="align-center" style="color:red;"><em>تسجيل البيانات</em></h2>
+					<h2 class="align-center" style="color:#6CC091;"><em>تسجيل البيانات المريض</em></h2>
 
-					<form action="#" method="post">
+					<form action="patientstore" method="post">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
+                        <fieldset>
 					<div class="field half name">
 					<label for="name" class="align-right"><em>اسم المريض</em></label>
-					<input name="name"  type="text" class="align-right" placeholder="الاسم">
+					<input name="p_name" id="p_name" type="text" class="align-right" placeholder="الاسم">
 					</div><br>
-						<div class="field half email">
-					<label for="email" class="align-right"><em>الاميل</em></label>
-					<input name="email" type="text" class="align-right" placeholder="الاميل">
-					</div><br>
+
+
+                     <div class="field half name">
+                     <label for="name" class="align-right"><em>الحالة المرضية</em></label>
+                     <input name="p_case"  id="p_case" type="text" class="align-right" placeholder="الحالة المرضية">
+                     </div><br>
+
+                        <div class="field half blood type ">
+                            <label for="bloodtype" class="align-right"><em> فصيله  الدم</em></label>
+                            <select name="p_b_id" id="p_b_id">
+                                @foreach(App\bloodType ::get() as $bloodType)
+                                    <option value='{{$bloodType->b_id}} '>   {{$bloodType->blood_type}} </option>
+                                @endforeach
+                            </select>
+                        </div><br>
+
+                        <div class="field half hospital">
+                            <label for="hospital" class="align-right"><em>اسم المستشفي</em></label>
+                            <input name="hospital" type="text"class="align-right" placeholder="اسم المستشفي">
+                        </div><br>
+
 					<div class="field half phone number">
 					<label for="phonenumber" class="align-right"><em>رقم التليفون</em></label>
-					<input name="phonenumber"   type="text"class="align-right" placeholder="رقم التليفون">
+					<input name="p_mobile"   type="text"class="align-right" placeholder="رقم التليفون">
 					</div><br>
-						<div class="field half hospital">
-					<label for="hospital" class="align-right"><em>المستشفي</em></label>
-					<input name="hospital" type="text"class="align-right" placeholder="اسم المستشفي">
-					</div><br>
-					<div class="field half blood type ">
-					<label for="bloodtype" class="align-right"><em> فصيله  الدم</em></label>
-					<select name="bloodtype">
-						<option>الفصيله</option>
-						<option>A+</option>
-						<option>A-</option>
-						<option>B+</option>
-						<option>B-</option>
-						<option>O+</option>
-						<option>O-</option>
-						<option>AB+</option>
-						<option>AB-</option>
-					</select>
-					</div><br>
+
+
+
+
 					<div class="field half country ">
 					<label for=" country" class="align-right"><em>المحافظه</em></label>
-
-					<select name=" country" class="align-right">
-						<option>اسم المحافظه</option>
-						<option>القاهره</option>
-						<option>الاسماعيليه</option>
-						<option>بورسعيد</option>
-
+					<select name="p_governorate" id="p_governorate">
+                        @foreach(App\governorate ::get() as $governorate)
+                            <option value='{{$governorate->id}} '>   {{$governorate->governorate_name}} </option>
+                        @endforeach
 					</select>
 
 
 						<label for="city" class="align-right"><em>المدينه</em></label>
-
-					<select name="city">
-						<option>اسم المدينه</option>
-						<option>فايد</option>
-						<option>القنطره شرق</option>
-						<option>الشيخ زايد</option>
-
+					<select name="p_city" id="p_city">
+                        @foreach(App\citie ::get() as $city)
+                            <option value='{{$city->c_id}} '>   {{$city->city_name}} </option>
+                        @endforeach
 					</select>
 
 					</div><br>
 
 						<button type="submit" style="...">تسجيل البيانات</button>
-
+                        </fieldset>
 
 				</form>
 

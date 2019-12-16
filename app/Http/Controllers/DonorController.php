@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use App\bloodType;
 use App\citie;
-use App\Doner;
+use App\Donor;
 use App\governorate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class DonerController extends Controller
+class DonorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,16 +19,10 @@ class DonerController extends Controller
     public function index()
     {
 
-        return view('doner');
+        return view('donor');
 
     }
 
-
-    public function info()
-    {
-        //
-        return ('info token');
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -49,14 +43,14 @@ class DonerController extends Controller
     public function store(Request $request)
     {
         //
-        $Doner = new Doner();
-        $Doner->d_name = $request->d_name;
-        $Doner->d_mobile = $request->d_mobile;
-        $Doner->email = $request->email;
-        $Doner->d_b_id = $request->d_b_id;
-        $Doner->d_governorate = $request->d_governorate;
-        $Doner->d_city = $request->d_city;
-        $Doner->save();
+        $Donor = new Donor();
+        $Donor->d_name = $request->d_name;
+        $Donor->d_mobile = $request->d_mobile;
+        $Donor->email = $request->email;
+        $Donor->d_b_id = $request->d_b_id;
+        $Donor->d_governorate = $request->d_governorate;
+        $Donor->d_city = $request->d_city;
+        $Donor->save();
 
         return back();
     }
@@ -75,29 +69,29 @@ class DonerController extends Controller
 //        $requests->d_b_id;
 //        $requests->d_city;
 
-             $doners = DB::table('doners')
+             $donors = DB::table('donors')
          ->join('bloodTypes', 'd_b_id', '=', 'b_id')
          ->leftJoin ('governorates', 'd_governorate', '=', 'id')
          ->leftJoin ('cities', 'd_city', '=', 'c_id')
-         ->select('doners.*', 'bloodTypes.blood_type', 'governorates.governorate_name','cities.city_name')
+         ->select('donors.*', 'bloodTypes.blood_type', 'governorates.governorate_name','cities.city_name')
           ->orderBy('d_governorate','asc')
           ->orderBy('d_city','asc')
          ->get();
 
 
              if(!empty($requests->d_b_id)){
-                 $doners = $doners->where ('d_b_id','=',$requests->d_b_id);
+                 $donors = $donors->where ('d_b_id','=',$requests->d_b_id);
              }
 
              if(!empty($requests->d_governorate)) {
-                 $doners = $doners->where('d_governorate', '=', $requests->d_governorate);
+                 $donors = $donors->where('d_governorate', '=', $requests->d_governorate);
              }
 
              if(!empty($requests->d_city)) {
-                 $doners = $doners->where('d_city', '=', $requests->d_city);
+                 $donors = $donors->where('d_city', '=', $requests->d_city);
              }
 
-        return view('search')->with('doners',$doners);
+        return view('search')->with('donors',$donors);
 
 
 

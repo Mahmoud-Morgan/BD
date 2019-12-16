@@ -15,17 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/doner','DonerController@index');
+Route::get('/donor','DonorController@index');
 
-Route::post('/store','DonerController@store');
+Route::post('/donorstore','DonorController@store');
 
-Route::get('/search','DonerController@filter');
+Route::get('/search','DonorController@filter');
 
-Route::post('/search','DonerController@filter');
+Route::post('/search','DonorController@filter');
 
-Route::get('/patient',function (){
-    return view('patientform');
-});
+Route::get('/patient','PatientController@index');
+
+Route::post('/patientstore','PatientController@store');
 
 Route::get('/home',function (){
     return view('home');
