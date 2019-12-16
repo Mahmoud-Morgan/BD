@@ -76,7 +76,7 @@
 						<div class="col-sm-3">
 					<select class="form-control" name="d_city" id="d_city">
                         @foreach(App\citie ::get() as $city)
-                            <option value='{{$city->id}} '>   {{$city->city_name}} </option>
+                            <option value='{{$city->c_id}} '>   {{$city->city_name}} </option>
                         @endforeach
 					</select>
 					</div>

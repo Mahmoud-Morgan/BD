@@ -21,9 +21,9 @@ Route::get('/info','DonerController@info');
 
 Route::post('/store','DonerController@store');
 
-Route::get('/filter','DonerController@filter');
+Route::get('/search','DonerController@filter');
 
-Route::post('/filter','DonerController@store');
+Route::post('/search','DonerController@filter');
 
 Route::get('/patiant',function (){
     return view('patiantform');
@@ -37,6 +37,4 @@ Route::get('/layout',function (){
     return view('layout');
 });
 
-Route::get('/search',function (){
-    return view('search');
-});
+
