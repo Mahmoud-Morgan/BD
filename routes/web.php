@@ -35,4 +35,11 @@ Route::get('/layout',function (){
     return view('layout');
 });
 
+Route::get('/thnx',function (){
+    return view('thnxdonor');
+});
+
+Route::get('/ship','OrderController@ship');
+Route::get('/complete','OrderController@complete');
+
 
