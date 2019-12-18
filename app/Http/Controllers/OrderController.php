@@ -2,20 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\patient;
 use Illuminate\Http\Request;
 
-class PatientController extends Controller
+use App\Mail\OrderdStarted;
+use Illuminate\Support\Facades\Mail;
+
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+
     public function index()
     {
         //
-        return view('patientform');
     }
 
     /**
@@ -34,25 +39,25 @@ class PatientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function start(Request $request)
+    {
+        Mail::to('g@g.com')->send(new OrderdStarted);
+    }
+
+    public function ship(Request $request)
+    {
+        return "ship";
+    }
+
+    public function complete(Request $request)
+    {
+        return "complete";
+    }
+
     public function store(Request $request)
     {
         //
-        $patient= new patient();
-        $patient->p_name = $request->p_name;
-        $patient->p_case = $request->p_case;
-        $patient->p_b_id = $request->p_b_id;
-        $patient->hospital = $request->hospital;
-        $patient->p_mobile = $request->p_mobile;
-        $patient->p_governorate = $request->p_governorate;
-        $patient->p_city = $request->p_city;
-        $patient->save();
-
-
-
-        return back();
-
-
-
     }
 
     /**

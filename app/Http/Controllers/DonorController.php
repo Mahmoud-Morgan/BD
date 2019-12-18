@@ -6,8 +6,10 @@ use App\bloodType;
 use App\citie;
 use App\Donor;
 use App\governorate;
+use App\Mail\OrderdStarted;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class DonorController extends Controller
 {
@@ -52,7 +54,9 @@ class DonorController extends Controller
         $Donor->d_city = $request->d_city;
         $Donor->save();
 
-        return back();
+        Mail::to($Donor->email)->send(new OrderdStarted($Donor));
+
+        return view('thnxdonor')->with('Donor',$Donor);
     }
 
     /**
