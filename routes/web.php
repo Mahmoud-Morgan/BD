@@ -45,3 +45,7 @@ Route::get('/complete','OrderController@complete');
 Route::get('/info',function (){
     return view('info');
 });
+
+Route::get('/aboutus',function (){
+    return view('aboutus');
+});
