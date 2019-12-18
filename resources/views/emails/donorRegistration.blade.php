@@ -9,7 +9,9 @@
 </header>
 <div class="inner">
     <header class="align-center">
+
         <h4 style="color:MediumSeaGreen;"> شكرا لانك اصبحت احد المتبرعين فى "جدد دمك". </h4>
+
 
 
     </header>

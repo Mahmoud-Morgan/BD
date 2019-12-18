@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+<<<<<<< HEAD
 use App\Mail\ThanksDonor;
+=======
+use App\Mail\OrderdStarted;
+>>>>>>> 0c72456896b473df7edc33a903d6cd7451193ea3
 use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
@@ -42,7 +46,11 @@ class OrderController extends Controller
 
     public function start(Request $request)
     {
+<<<<<<< HEAD
         Mail::to('g@g.com')->send(new ThanksDonor);
+=======
+        Mail::to('g@g.com')->send(new OrderdStarted);
+>>>>>>> 0c72456896b473df7edc33a903d6cd7451193ea3
     }
 
     public function ship(Request $request)

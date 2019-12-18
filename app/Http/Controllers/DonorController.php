@@ -6,7 +6,9 @@ use App\bloodType;
 use App\citie;
 use App\Donor;
 use App\governorate;
+
 use App\Mail\ThanksDonor;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -54,7 +56,9 @@ class DonorController extends Controller
         $Donor->d_city = $request->d_city;
         $Donor->save();
 
+
         Mail::to($Donor->email)->send(new ThanksDonor($Donor));
+
 
         return view('thnxdonor')->with('Donor',$Donor);
     }
