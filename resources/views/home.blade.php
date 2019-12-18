@@ -20,35 +20,32 @@
 <section id="banner">
     <div class="inner">
         <header>
-            <h1>مرحبا   بك    معنا </h1>
+                    <h1>
+
+                    </h1>
         </header>
 
         <div class="flex ">
 
             <div>
 
-                <h3>هل تريد ان تتبرع</h3>
-                <br>
 
-                <a href="/donor" ><button style="font-size:25px">متبرع<i class="fa fa-heart"></i></button></a>
+                <a href="/donor" ><button style="font-size:20px"> متبرع جديد </button></a>
 
             </div>
 
             <div>
 
-                <h3>لمعرفة بنوك الدم</h3>
-                <br>
-                <button style="font-size:25px">بنوك الدم<i class="fa fa-heart"></i></button>
+
+                <button style="font-size:20px">بنوك الدم</button>
 
             </div>
 
             <div>
-                <h3>
-                    هل تريد متبرع
-                </h3>
-                <br>
 
-                <a href="/patient" ><button style="font-size:25px">محتاج دم<i class="fa fa-heart"></i></button></a>
+
+
+                <a href="/patient" ><button style="font-size:20px">محتاج دم</button></a>
 
             </div>
 
@@ -68,11 +65,11 @@
                     <img src="images/pic01.jpg" alt="Pic 01" />
                 </div>
                 <header>
-                    <h3>Lorem ipsum<br /> dolor amet nullam</h3>
+                    <h2>التبرع بالدم</h2>
                 </header>
-                <p>Morbi in sem quis dui placerat ornare. Pellentesquenisi<br />euismod in, pharetra a, ultricies in diam sed arcu. Cras<br />consequat  egestas augue vulputate.</p>
+                <h4>هي إجراء طبي يكمن في نقل دم من شخص سليم <br> الي شخص مريض محتاج للدم يستخدم ذلك الدم في عمليات <br> نقل الدم كاملا أو بأحد مكوناته فقط بعد فصلها.</h4>
                 <footer>
-                    <a href="generic.html" ><button style="font-size:15px">Button <i class="fa fa-heart"></i></button></a>
+                    <a href="generic.html" ><button style="font-size:15px">اقراء المزيد</button></a>
                 </footer>
             </article>
             <article>
@@ -80,11 +77,14 @@
                     <img src="images/pic02.jpg" alt="Pic 02" />
                 </div>
                 <header>
-                    <h3>Sed feugiat<br /> tempus adipicsing</h3>
+                    <h2>فوائد التبرع بالدم</h2>
                 </header>
-                <p>Pellentesque fermentum dolor. Aliquam quam lectus<br />facilisis auctor, ultrices ut, elementum vulputate, nunc<br /> blandit ellenste egestagus commodo.</p>
+
+                <h4>زيادة نشاط نخاع العظم لإنتاج خلايا دم جديدة <br>  التبرع بالدم يساعد علي تقليل نسبة الحديد في الدم   <br> لأنه يعتبر أحد أسباب الإصابة بأمراض القلب وانسداد الشرايين.</h4>
+
+
                 <footer>
-                    <a href="generic.html" ><button style="font-size:15px">Button <i class="fa fa-heart"></i></button></a>
+                    <a href="generic.html" ><button style="font-size:15px">اقراء المزيد</button></a>
                 </footer>
             </article>
         </div>
