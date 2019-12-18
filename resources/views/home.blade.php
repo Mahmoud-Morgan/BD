@@ -69,7 +69,7 @@
                 </header>
                 <h4>هي إجراء طبي يكمن في نقل دم من شخص سليم <br> الي شخص مريض محتاج للدم يستخدم ذلك الدم في عمليات <br> نقل الدم كاملا أو بأحد مكوناته فقط بعد فصلها.</h4>
                 <footer>
-                    <a href="generic.html" ><button style="font-size:15px">اقراء المزيد</button></a>
+                    <a href="/info" ><button style="font-size:15px">اقراء المزيد</button></a>
                 </footer>
             </article>
             <article>
@@ -84,7 +84,7 @@
 
 
                 <footer>
-                    <a href="generic.html" ><button style="font-size:15px">اقراء المزيد</button></a>
+                    <a href="/info" ><button style="font-size:15px">اقراء المزيد</button></a>
                 </footer>
             </article>
         </div>

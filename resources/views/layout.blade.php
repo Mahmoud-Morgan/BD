@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <!--
 	Projection by TEMPLATED
 	templated.co @templatedco
@@ -9,7 +8,9 @@
 		<title>جدد دمك</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-        <<link rel="stylesheet" type="text/css" href="{{URL::asset('css/main.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{URL::asset('css/main.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.css')}}">
 {{--        <<link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.css')}}">--}}
 	</head>
 	<body class="subpage">
@@ -20,7 +21,7 @@
 					<a href="/home" class="logo"><strong>جدد دمك</strong></a>
 					<nav id="nav">
 						<a href="index.html">اتصل بنا</a>
-						<a href="generic.html">فوائد التبرع</a>
+						<a href="/alfwed">فوائد التبرع</a>
                         <a href="/search">بيانات المتبرعين</a>
 						<a href="/home">الرئيسية</a>
 					</nav>
@@ -33,21 +34,22 @@
 
 		<!-- Footer -->
 			<footer id="footer">
-				<div class="inner">
 
-                        <ul class="icons">
-                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                            <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-                            <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-                            <li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
-                        </ul>
+                <ul class="icons">
+                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+                    <br>
+                    <li><a href="#" > <p>اتصل بنا &#x260E;</p> </a></li>
+                        <li><a href="#"> &copy; MS2D2A TEAM 2019 </a></li>
+                </ul>
 
 
 
-				</div>
-			</footer>
+
+            </footer>
 
 		<!-- Scripts -->
         <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
