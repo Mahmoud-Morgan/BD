@@ -27,7 +27,7 @@
 						<h1>مرحبا   بك    معنا </h1>
 					</header>
 
-					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+{{--					<nav class="navbar navbar-expand-lg navbar-light bg-light">--}}
 
 
 
@@ -64,7 +64,7 @@
                                             </select>
                                 </thead>
                         </table>
-                    </nav>
+{{--                    </nav>--}}
 
                         </fieldset>
                     </form>

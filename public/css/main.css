@@ -2544,7 +2544,7 @@
 		font-weight: 800;
 		height: 3.75em;
 		line-height: 3.85em;
-		letter-spacing: 2px;
+		/*letter-spacing: 2px;*/
 		padding: 0 4em;
 		text-align: center;
 		text-decoration: none;
@@ -2937,7 +2937,7 @@
 
 		#banner:before {
 			content: '';
-			background: rgba(75, 75, 93, 0.85);
+			background: rgba(50, 50, 93, 0.50);
 			position: absolute;
 			width: 100%;
 			height: 100%;
@@ -3116,7 +3116,7 @@
 /* Footer */
 
 	#footer {
-		padding: 6em 0;
+		padding: 2em 0;
 		background: #6cc091;
 		color: #fff;
 		text-align: center;
