@@ -42,4 +42,6 @@ Route::get('/thnx',function (){
 Route::get('/ship','OrderController@ship');
 Route::get('/complete','OrderController@complete');
 
-
+Route::get('/info',function (){
+    return view('info');
+});
