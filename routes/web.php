@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/donor','DonorController@index');
 
@@ -27,7 +25,7 @@ Route::get('/patient','PatientController@index');
 
 Route::post('/patientstore','PatientController@store');
 
-Route::get('/home',function (){
+Route::get('/',function (){
     return view('home');
 });
 
@@ -48,4 +46,12 @@ Route::get('/info',function (){
 
 Route::get('/aboutus',function (){
     return view('aboutus');
+});
+
+Route::get('/pr',function (){
+    return view('emails.patientRequest');
+});
+
+Route::get('/sr',function (){
+    return view('sentRequest');
 });

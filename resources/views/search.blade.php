@@ -24,7 +24,7 @@
 
                         <fieldset>
 					<header>
-						<h1>مرحبا   بك    معنا </h1>
+						<h1>بيانات المتبرعين </h1>
 					</header>
 
 {{--					<nav class="navbar navbar-expand-lg navbar-light bg-light">--}}

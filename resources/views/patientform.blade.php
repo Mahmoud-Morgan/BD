@@ -74,11 +74,7 @@
 				</form>
 
                     <div>
-                        <h3>
-                        {{--                           //--}}
-                        </h3>
                         <br>
-
                         <a href="/search" ><button style="font-size:25px"> بيانات المتبرعين</button></a>
 
                     </div>

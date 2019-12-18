@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PatientRequest;
 use App\patient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class PatientController extends Controller
 {
@@ -47,9 +50,44 @@ class PatientController extends Controller
         $patient->p_city = $request->p_city;
         $patient->save();
 
+        //
+        //query
 
 
-        return back();
+        $donors = DB::table('donors')
+            ->join('bloodTypes', 'd_b_id', '=', 'b_id')
+            ->leftJoin ('governorates', 'd_governorate', '=', 'id')
+            ->leftJoin ('cities', 'd_city', '=', 'c_id')
+            ->select('donors.*', 'bloodTypes.blood_type', 'governorates.governorate_name','cities.city_name')
+            ->orderBy('d_governorate','asc')
+            ->orderBy('d_city','asc')
+            ->get();
+
+
+
+            $donors = $donors->where ('d_b_id','=',$request->p_b_id);
+
+
+
+            $donors = $donors->where('d_governorate', '=', $request->p_governorate);
+
+
+
+            $donors = $donors->where('d_city', '=', $request->p_city);
+
+            //
+
+        foreach ($donors as $donor) {
+
+            Mail::to($donor->email)->send(new PatientRequest($patient));
+        }
+
+        //
+
+        return view('sentRequest');
+
+        //
+
 
 
 

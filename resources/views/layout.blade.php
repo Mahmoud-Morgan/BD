@@ -18,12 +18,12 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="/home" class="logo"><strong>جدد دمك</strong></a>
+					<a href="/" class="logo"><strong>جدد دمك</strong></a>
 					<nav id="nav">
 						<a href="/aboutus">اتصل بنا</a>
 						<a href="/info">فوائد التبرع</a>
                         <a href="/search">بيانات المتبرعين</a>
-						<a href="/home">الرئيسية</a>
+						<a href="/">الرئيسية</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
@@ -42,8 +42,8 @@
                     <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
                     <li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
                     <br>
-                    <li><a href="#" > <p>اتصل بنا &#x260E;</p> </a></li>
-                        <li><a href="#"> &copy; MS2D2A TEAM 2019 </a></li>
+                    <li><a href="/aboutus" > <p>اتصل بنا &#x260E;</p> </a></li>
+                        <li><a href="/aboutus"> &copy; MS2D2A TEAM 2019 </a></li>
                 </ul>
 
 
