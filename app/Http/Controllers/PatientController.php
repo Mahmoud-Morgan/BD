@@ -87,7 +87,7 @@ class PatientController extends Controller
 
         foreach ($donors as $donor) {
 
-            Mail::to($donor->email)->send(new PatientRequest($patient));
+            Mail::to($donor->email)->send(new PatientRequest($patient,$donor));
         }
 
         //
