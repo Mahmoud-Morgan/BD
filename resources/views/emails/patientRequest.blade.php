@@ -30,7 +30,7 @@
                     </div><br>
 
                     <div class="field half blood type ">
-                        <label for="bloodtype" class="align-right" style="color:#6CC091;"><em> فصيله  الدم</em></label>
+                        <label for="bloodtype" class="align-right" style="color:#6CC091;"><em> فصيله  الدم :</em></label>
                         {{$donor->blood_type}}
                     </div><br>
 

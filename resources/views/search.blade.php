@@ -5,8 +5,8 @@
 -->
 <html>
 
-        <<link rel="stylesheet" type="text/css" href="{{URL::asset('css/main.css')}}">
-        <<link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{URL::asset('css/main.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.css')}}">
 
 
 	<body>

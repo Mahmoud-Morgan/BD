@@ -37,8 +37,6 @@ Route::get('/thnx',function (){
     return view('thnxdonor');
 });
 
-Route::get('/ship','OrderController@ship');
-Route::get('/complete','OrderController@complete');
 
 Route::get('/info',function (){
     return view('info');
@@ -59,4 +57,8 @@ Route::get('/sr',function (){
 
 Route::get('/df',function (){
     return view('donorform');
+});
+
+Route::get('/dr',function (){
+    return view('emails.donorRegistration');
 });
