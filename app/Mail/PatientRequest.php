@@ -17,10 +17,12 @@ class PatientRequest extends Mailable
      * @return void
      */
      public $patient;
-    public function __construct($patient)
+     public $donor;
+    public function __construct($patient,$donor)
     {
         //
         $this->patient = $patient;
+        $this->donor = $donor;
     }
 
     /**

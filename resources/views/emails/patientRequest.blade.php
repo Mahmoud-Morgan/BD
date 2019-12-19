@@ -31,6 +31,7 @@
 
                     <div class="field half blood type ">
                         <label for="bloodtype" class="align-right" style="color:#6CC091;"><em> فصيله  الدم</em></label>
+                        {{$donor->blood_type}}
                     </div><br>
 
                     <div class="field half hospital">
@@ -40,6 +41,7 @@
 
                     <div class="field half phone number">
                         <label for="phonenumber" class="align-right" style="color:#6CC091;"><em>رقم التليفون :</em></label>
+                        {{$patient->p_mobile}}
                     </div><br>
 
 
@@ -47,10 +49,11 @@
 
                     <div class="field half country ">
                         <label for=" country" class="align-right" style="color:#6CC091;"><em>المحافظه :</em></label>
+                        {{$donor->governorate_name}}
 
 
                         <label for="city" class="align-right" style="color:#6CC091;"><em>المدينه :</em></label>
-
+                        {{$donor->city_name}}
                     </div><br>
 
 
