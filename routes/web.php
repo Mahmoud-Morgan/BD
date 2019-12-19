@@ -55,3 +55,8 @@ Route::get('/pr',function (){
 Route::get('/sr',function (){
     return view('sentRequest');
 });
+
+
+Route::get('/df',function (){
+    return view('donorform');
+});

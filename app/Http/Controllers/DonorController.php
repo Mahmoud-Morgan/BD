@@ -23,7 +23,7 @@ class DonorController extends Controller
     public function index()
     {
 
-        return view('donor');
+        return view('donorform');
 
     }
 

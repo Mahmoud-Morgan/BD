@@ -68,7 +68,7 @@
 
 					</div><br>
 
-						<button type="submit" style="...">تسجيل البيانات</button>
+						<button type="submit" style="...">تسجيل الطلب </button>
                         </fieldset>
 
 				</form>
@@ -82,6 +82,7 @@
 				</div>
 			</div>
 		</section>
+    </body>
 @endsection
 		<!-- Scripts -->
         <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
@@ -89,5 +90,5 @@
         <script type="text/javascript" src="{{ URL::asset('js/until.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
 
-	</body>
+
 </html>
