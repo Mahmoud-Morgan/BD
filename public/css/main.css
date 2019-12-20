@@ -2937,7 +2937,7 @@
 
 		#banner:before {
 			content: '';
-			background: rgba(50, 50, 93, 0.50);
+			background: rgba(0, 30, 10, 0.65);
 			position: absolute;
 			width: 100%;
 			height: 100%;

@@ -62,3 +62,8 @@ Route::get('/df',function (){
 Route::get('/dr',function (){
     return view('emails.donorRegistration');
 });
+
+Route::post('/fetch', 'DonorController@fetch');
+
+
+

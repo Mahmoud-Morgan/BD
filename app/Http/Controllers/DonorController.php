@@ -23,6 +23,7 @@ class DonorController extends Controller
     public function index()
     {
 
+
         return view('donorform');
 
     }
@@ -73,9 +74,7 @@ class DonorController extends Controller
     public function filter(Request $requests)
     {
         //
-//        $requests->d_governorate;
-//        $requests->d_b_id;
-//        $requests->d_city;
+
 
              $donors = DB::table('donors')
          ->join('bloodTypes', 'd_b_id', '=', 'b_id')
@@ -108,6 +107,18 @@ class DonorController extends Controller
 
 
     }
+
+
+    function fetch(Request $request)
+    {
+        $gov_id = $request->input('gov_id');
+        $cities = DB::table('cities')->where('gov_id','=',$gov_id)
+            ->get();
+        return $cities ;
+
+
+    }
+
     /**
      * Display the specified resource.
      *
