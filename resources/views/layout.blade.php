@@ -20,7 +20,7 @@
 				<div class="inner">
 					<a href="/" class="logo"><strong>جدد دمك</strong></a>
 					<nav id="nav">
-						<a href="/aboutus">اتصل بنا</a>
+						<a href="/aboutus">عن موقعنا</a>
 						<a href="/info">فوائد التبرع</a>
                         <a href="/search">بيانات المتبرعين</a>
 						<a href="/">الرئيسية</a>
