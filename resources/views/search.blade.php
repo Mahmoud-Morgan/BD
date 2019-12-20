@@ -48,9 +48,9 @@
 									<th scope="col">
 											<select name="d_city" id="d_city" class="chosen-select" tabindex="5">
 													<option >اسم المدينة </option>
-                                                @foreach(App\citie ::get() as $city)
-                                                    <option value='{{$city->c_id}} '>   {{$city->city_name}} </option>
-                                                @endforeach
+{{--                                                @foreach(App\citie ::get() as $city)--}}
+{{--                                                    <option value='{{$city->c_id}} '>   {{$city->city_name}} </option>--}}
+{{--                                                @endforeach--}}
 
 											</select>
 
@@ -87,6 +87,41 @@
 
         </div>
 
+        <script>
+
+            $(document).ready(function(){
+
+                $('#d_governorate').on('change',function(){
+                    var gov_id =$(this).val();
+
+                    if(gov_id){
+
+                        $.ajax({
+                            url:'/fetch',
+                            type:'post',
+                            data:{gov_id:gov_id},
+                            success:function (data) {
+                                $('#d_city').empty();
+                                console.log(data)
+                                $.each(data ,function (index,city) {
+                                    var op = $("<option value='"+city.c_id+"'></option>");
+
+                                    op.append("<option '>"+city.city_name+"</option>")
+
+                                    $('#d_city').append(op);
+                                });
+
+                            }
+                        })
+
+                    }
+                    else {$('#d_city').html('<option>اختر المحافظة اولا </option>') }
+
+                });
+
+                $.ajaxSetup({ headers:{'X-CSRF-TOKEN':'{!! csrf_token() !!}'}})
+            })
+        </script>
 
 
     </body>

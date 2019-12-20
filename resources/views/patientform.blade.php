@@ -61,9 +61,9 @@
 
 						<label for="city" class="align-right"><em>المدينه</em></label>
 					<select name="p_city" id="p_city">
-                        @foreach(App\citie ::get() as $city)
-                            <option value='{{$city->c_id}} '>   {{$city->city_name}} </option>
-                        @endforeach
+{{--                        @foreach(App\citie ::get() as $city)--}}
+{{--                            <option value='{{$city->c_id}} '>   {{$city->city_name}} </option>--}}
+{{--                        @endforeach--}}
 					</select>
 
 					</div><br>
@@ -81,8 +81,47 @@
                     <br>
 				</div>
 			</div>
-		</section>
+        </section>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('#p_governorate').on('change',function(){
+                var gov_id =$(this).val();
+
+                if(gov_id){
+
+                    $.ajax({
+                        url:'/fetch',
+                        type:'post',
+                        data:{gov_id:gov_id},
+                        success:function (data) {
+                            $('#p_city').empty();
+                            console.log(data)
+                            $.each(data ,function (index,city) {
+                                var op = $("<option value='"+city.c_id+"'></option>");
+
+                                op.append("<option '>"+city.city_name+"</option>")
+
+                                $('#p_city').append(op);
+                            });
+
+                        }
+                    })
+
+                }
+                else {$('#p_city').html('<option>اختر المحافظة اولا </option>') }
+
+            });
+
+            $.ajaxSetup({ headers:{'X-CSRF-TOKEN':'{!! csrf_token() !!}'}})
+        })
+    </script>
+
     </body>
+
+
 @endsection
 		<!-- Scripts -->
         <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>

@@ -75,8 +75,6 @@
 
         <script>
 
-
-
             $(document).ready(function(){
 
                 $('#d_governorate').on('change',function(){
@@ -102,20 +100,12 @@
                             }
                         })
 
-
                     }
-                    else {
-                        $('#d_city').html('<option>اختر المحافظة اولا </option>')
-                    }
+                    else {$('#d_city').html('<option>اختر المحافظة اولا </option>') }
 
                 });
 
-                $.ajaxSetup({
-                    headers:{
-                        'X-CSRF-TOKEN':'{!! csrf_token() !!}'
-                    }
-                })
-
+                $.ajaxSetup({ headers:{'X-CSRF-TOKEN':'{!! csrf_token() !!}'}})
             })
         </script>
 
