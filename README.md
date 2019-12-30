@@ -1,6 +1,6 @@
 # Blood-Donation web app Project 
 
-For recording blood donors info to contact when a patient are in need.
+For recording blood donor's info to contact when a patient is in need.
 
 ### Note
 
@@ -24,7 +24,7 @@ PHP Laravel.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install 
 
 ```
 -Xampp
@@ -46,7 +46,7 @@ import BloodDonation.sql to your Database
 ```
 
 
-edite your environment file 
+edite your environment file according to Database & Mailtrap
 ```
 env.
 ```
