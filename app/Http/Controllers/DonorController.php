@@ -8,6 +8,7 @@ use App\Donor;
 use App\governorate;
 
 use App\Mail\ThanksDonor;
+use App\Http\Resources\DonorCollection;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -18,8 +19,17 @@ class DonorController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response;
      */
+
+
+        public function api(){
+          // $donors_data = Donor::all;
+            // $donors_data = DB::table('donors')->get();
+            // return DonorCollection::collection($donors_data);
+            return Donor::all();
+        }
+
     public function index()
     {
 
@@ -76,14 +86,17 @@ class DonorController extends Controller
         //
 
 
-             $donors = DB::table('donors')
-         ->join('bloodTypes', 'd_b_id', '=', 'b_id')
+            //  $donors = DB::table('donors')
+            $donors = Donor::
+         join('bloodTypes', 'd_b_id', '=', 'b_id')
          ->leftJoin ('governorates', 'd_governorate', '=', 'id')
          ->leftJoin ('cities', 'd_city', '=', 'c_id')
          ->select('donors.*', 'bloodTypes.blood_type', 'governorates.governorate_name','cities.city_name')
           ->orderBy('d_governorate','asc')
           ->orderBy('d_city','asc')
          ->get();
+
+  
 
 
              if(!empty($requests->d_b_id)){
