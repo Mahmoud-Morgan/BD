@@ -54,10 +54,15 @@
             </footer>
 
 		<!-- Scripts -->
-        <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
+        {{-- <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/skel.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/until.js') }}"></script>
-        <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
+		<script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script> --}}
+		
+		<script type="text/javascript" src="{{ secure_asset('js/main.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/skel.min.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/until.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/jquery.min.js') }}"></script>
 
 	</body>
 </html>
