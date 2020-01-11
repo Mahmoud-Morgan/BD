@@ -7,6 +7,8 @@
 
         <link rel="stylesheet" type="text/css" href="{{URL::asset('css/main.css')}}">
         <link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{ secure_asset('css/bootstrap.css') }}">
+		<link rel="stylesheet" href="{{ secure_asset('css/bootstrap.min.css') }}">
 
 
 	<body>
