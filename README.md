@@ -27,6 +27,8 @@ Deployed on Heroku as a free hosting :
 https://blood-donation-12.herokuapp.com/
 
 
+Donors API : https://blood-donation-12.herokuapp.com/api/donorsapi
+
 
 ### Prerequisites
 
