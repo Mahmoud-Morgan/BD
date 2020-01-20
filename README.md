@@ -21,6 +21,12 @@ PHP Laravel.
      the compatible donors Phone number's will displayed.
 
 
+### Deploy link
+
+Deployed on Heroku as a free hosting :
+https://blood-donation-12.herokuapp.com/
+
+
 
 ### Prerequisites
 
