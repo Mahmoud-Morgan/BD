@@ -7,7 +7,7 @@ For recording the blood donor's info to contact when a patient is in need.
 This web app builds as a prototype project.
 PHP Laravel.
 
-## App features.
+## App features
 - Donor can input his information(Name-BloodType-Mobile No.-Email-Adress:(gov->city))
   and after submitting ,he will receive thanks mail to saving his info on the web site.
 
@@ -23,7 +23,7 @@ PHP Laravel.
 
 ### Deploy link
 
-Deployed on Heroku as a free hosting :
+Deployed on Heroku :
 https://blood-donation-12.herokuapp.com/
 
 
@@ -59,14 +59,10 @@ edit your environment file according to Database & Mailtrap
 env.
 ```
 
-
-
-
-
 ## Built With
 
-* [Laravel](https://laravel.com/) - The web framework used
-* [git](https://git-scm.com/) - Version Control System
+* [Laravel](https://laravel.com/) - Laravel framework 
+
 
 
 
